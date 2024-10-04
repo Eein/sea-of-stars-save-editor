@@ -15,9 +15,9 @@
           inherit system overlays;
         };
         libPath = with pkgs; lib.makeLibraryPath [
-          # libGL
-          # libxkbcommon
-          # wayland
+          libxkbcommon
+          wayland
+          libGL
           # xorg.libX11
           # xorg.libXcursor
           # xorg.libXi
@@ -29,7 +29,7 @@
           buildInputs = [
             pkg-config
             openssl
-            # xorg.libxcb
+            xorg.libxcb
             # linuxPackages_latest.perf
             # wasm-pack
             # cargo-flamegraph
